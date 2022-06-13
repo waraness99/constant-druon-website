@@ -14,9 +14,7 @@ export const JobHistory = () => {
     <Section>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing="6" shouldWrapChildren>
-          <Heading as="h2" size="xl">
-            Employment history
-          </Heading>
+          <Heading as="h2">Employment history</Heading>
           <Text>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.

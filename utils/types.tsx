@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export type JobTypes = {
   companyName: string;
   companyLogo: string;
@@ -6,4 +8,11 @@ export type JobTypes = {
   description: string;
   startDate: string;
   endDate: string;
+};
+
+export type FunFactProps = {
+  id: string;
+  title: string;
+  description: string;
+  icon: IconType;
 };

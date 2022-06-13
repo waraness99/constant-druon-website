@@ -11,10 +11,8 @@ const theme = extendTheme({
       defaultProps: {
         size: "xl",
         letterSpacing: "tight",
-        fontWeight: "extrabold",
       },
       baseStyle: ({ colorMode }: { colorMode: ColorMode }) => ({
-        fontWeight: "bold",
         color: colorMode === "light" ? "black" : "white",
       }),
     },

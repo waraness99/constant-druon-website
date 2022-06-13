@@ -5,7 +5,9 @@ import Head from "next/head";
 import { SimplePage } from "src/components/Layout/SimplePage";
 import { Hero } from "src/components/Home/Hero";
 import { JobHistory } from "src/components/Home/JobHistory";
+import { Skills } from "src/components/Home/Skills";
 import { Pitch } from "src/components/Home/Pitch";
+import { FunFacts } from "src/components/Home/FunFacts";
 
 const Home: NextPage = () => (
   <>
@@ -19,7 +21,9 @@ const Home: NextPage = () => (
     <SimplePage>
       <Hero />
       <JobHistory />
+      <Skills />
       <Pitch />
+      <FunFacts />
     </SimplePage>
   </>
 );

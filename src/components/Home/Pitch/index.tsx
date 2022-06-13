@@ -19,11 +19,9 @@ export const Pitch = () => (
       </Center>
 
       <Stack spacing="8" shouldWrapChildren>
-        <Heading as="h1">{`I had the privilege to do a lot of cool presentations for the startups I cofounded!`}</Heading>
+        <Heading as="h2">{`I had the privilege to do a lot of cool presentations for the startups I co-founded!`}</Heading>
 
-        <Text as="h2">
-          I try to make the world a better place by creating quality software that improve the lives of those around me.
-        </Text>
+        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</Text>
 
         <Link href="/projects" as={`/projects`} passHref>
           <ButtonWithArrow>Check my previous projects</ButtonWithArrow>

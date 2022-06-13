@@ -8,7 +8,7 @@ interface SimplePageProps extends FlexProps {
 
 export const SimplePage = ({ hasTabNavigation = true, children, ...rest }: SimplePageProps) => (
   <Flex minHeight="100vh" flexDirection="column" {...rest}>
-    <Header hasTabNavigation={hasTabNavigation} />
+    <Header />
     {children}
   </Flex>
 );

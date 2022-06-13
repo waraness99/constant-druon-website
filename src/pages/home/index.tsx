@@ -11,7 +11,7 @@ import { FunFacts } from "src/components/Home/FunFacts";
 const Home: NextPage = () => (
   <>
     <Head>
-      <title>Constant Druon - Software Engineer Student</title>
+      <title>Constant Druon - Software Engineer</title>
       <meta
         name="description"
         content="Hi, I'm Constant Druon! I try to make the world a better place by creating quality software that improve the lives of those around me."

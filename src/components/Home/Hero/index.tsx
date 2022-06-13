@@ -20,11 +20,11 @@ export const Hero = () => (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems="center">
       <Stack spacing="6" shouldWrapChildren>
         <Heading as="h1" fontWeight="extrabold" size="2xl">
-          Hi, I'm Constant Druon, I'm a{" "}
+          {`Hi, I'm Constant Druon, I'm a `}
           <chakra.span bgGradient="linear(to-r, #f06844, #ee4c54, #d45e95, #9c6ca6, #6583c1)" bgClip="text">
             Software Engineer
-          </chakra.span>{" "}
-          Student.
+          </chakra.span>
+          {` Student.`}
         </Heading>
         <Text>
           I try to make the world a better place by creating quality software that improve the lives of those around me.

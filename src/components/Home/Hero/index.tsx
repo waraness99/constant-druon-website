@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Badge,
   Box,
   Center,
   chakra,
@@ -19,13 +18,15 @@ export const Hero = () => (
   <Section>
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems="center">
       <Stack spacing="6" shouldWrapChildren>
-        <Heading as="h1" fontWeight="extrabold" size="2xl">
-          {`Hi, I'm Constant Druon, I'm a `}
-          <chakra.span bgGradient="linear(to-r, #f06844, #ee4c54, #d45e95, #9c6ca6, #6583c1)" bgClip="text">
-            Software Engineer
-          </chakra.span>
-          {` Student.`}
+        <Heading as="h1" size="2xl" fontWeight="extrabold">
+          {`Hi, I'm Constant Druon, a `}
+          <chakra.span
+            bgGradient="linear(to-r, #f06844, #ee4c54, #d45e95, #9c6ca6, #6583c1)"
+            bgClip="text"
+            pb="1"
+          >{`Software Engineer`}</chakra.span>
         </Heading>
+
         <Text>
           I try to make the world a better place by creating quality software that improve the lives of those around me.
         </Text>
@@ -36,10 +37,10 @@ export const Hero = () => (
         <Img boxSize="full" objectFit="contain" src="/constant-druon-metaverse.png" alt="3D Avatar of Constant Druon" />
         <Box
           w="100%"
-          h="40%"
+          h="22%"
           position="absolute"
           bottom="0"
-          bgGradient={`linear(to-b, #ffffff00,  ${mode("white", "gray.800")})`}
+          bgGradient={`linear(to-b, ${mode("#ffffff00", "#1A202C00")},  ${mode("white", "gray.800")})`}
         />
       </Center>
     </SimpleGrid>

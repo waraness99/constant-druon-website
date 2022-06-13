@@ -2,16 +2,16 @@ import React from "react";
 import type { NextPage } from "next";
 
 import { SimplePage } from "src/components/Layout/SimplePage";
-import { HomeHero } from "src/components/Home/HomeHero";
+import { Hero } from "src/components/Home/Hero";
 import { JobHistory } from "src/components/Home/JobHistory";
-import { HomePitch } from "src/components/Home/HomePitch";
+import { Pitch } from "src/components/Home/Pitch";
 
 const Home: NextPage = () => {
   return (
     <SimplePage>
-      <HomeHero />
+      <Hero />
       <JobHistory />
-      <HomePitch />
+      <Pitch />
     </SimplePage>
   );
 };

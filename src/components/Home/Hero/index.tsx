@@ -4,7 +4,7 @@ import { Badge, Box, Center, Heading, Img, SimpleGrid, Stack, Text, useColorMode
 import { Section } from "../../Section";
 import { GetResumeButton } from "src/components/Button/GetResumeButton";
 
-export const HomeHero = () => {
+export const Hero = () => {
   return (
     <Section>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems="center">

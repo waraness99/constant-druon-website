@@ -5,7 +5,7 @@ import { Center, Heading, Img, SimpleGrid, Stack, Text } from "@chakra-ui/react"
 import { Section } from "src/components/Section";
 import { ButtonWithArrow } from "src/components/Button/ButtonWithArrow";
 
-export const HomePitch = () => {
+export const Pitch = () => {
   return (
     <Section>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems="center">

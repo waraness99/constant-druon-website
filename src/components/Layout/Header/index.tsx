@@ -6,13 +6,13 @@ import { Box, Flex, HStack, useColorModeValue as mode } from "@chakra-ui/react";
 import { Logo } from "src/components/Logo";
 import { DarkModeSwitch } from "src/components/DarkModeSwitch";
 import { GetResumeButton } from "src/components/Button/GetResumeButton";
+import { MobileNav } from "./components/MobileNav";
+import { NavLink } from "./components/NavLink";
 
-import { MobileNav } from "./components/MobileNav.component";
-import { NavLink } from "./components/NavLink.component";
 import { navbar } from "utils/links";
 
 export const Header = () => {
-  const router = useRouter();
+  const { pathname } = useRouter();
 
   return (
     <Box
@@ -35,7 +35,7 @@ export const Header = () => {
 
             <HStack display={{ base: "none", lg: "flex" }} spacing="8">
               {navbar.map((page) => (
-                <NavLink.Desktop key={page.id} active={router.pathname === page.path} href={page.path}>
+                <NavLink.Desktop key={page.id} active={pathname === page.path} href={page.path}>
                   {page.id}
                 </NavLink.Desktop>
               ))}

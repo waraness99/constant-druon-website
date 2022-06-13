@@ -1,6 +1,6 @@
 import React from "react";
 import NextLink from "next/link";
-import { NavLink } from "./NavLink.component";
+
 import {
   Box,
   Button,
@@ -17,6 +17,8 @@ import { HTMLMotionProps, motion, Variants } from "framer-motion";
 import { RemoveScroll } from "react-remove-scroll";
 import FocusLock from "react-focus-lock";
 import { saveAs } from "file-saver";
+
+import { NavLink } from "../NavLink";
 import { navbar } from "utils/links";
 
 const variants: Variants = {

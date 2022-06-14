@@ -1,8 +1,8 @@
 import React from "react";
 import { Stack, Heading, Text, Icon, useColorModeValue as mode, Flex } from "@chakra-ui/react";
-import { FunFactProps } from "utils/types";
+import { FunFactTypes } from "utils/types";
 
-export const FunFactCard = ({ funFactData }: { funFactData: FunFactProps }) => {
+export const FunFactCard = ({ funFactData }: { funFactData: FunFactTypes }) => {
   return (
     <Flex bg={mode("gray.50", "whiteAlpha.100")} rounded="lg" p={{ base: "6", md: "8", lg: "10" }}>
       <Stack spacing="8">

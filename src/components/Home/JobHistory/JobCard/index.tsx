@@ -1,13 +1,12 @@
 import React from "react";
-import { HStack, Stack, Text, Image, Icon, useColorModeValue as mode } from "@chakra-ui/react";
+import { HStack, Stack, Flex, Text, Image, Icon, useColorModeValue as mode } from "@chakra-ui/react";
 import { MdLocationOn } from "react-icons/md";
-import { EmptyCard } from "../EmptyCard";
 
 import { formatDate } from "utils/date";
 import { JobTypes } from "utils/types";
 
 export const JobCard = ({ job }: { job: JobTypes }) => (
-  <EmptyCard>
+  <Flex bg={mode("gray.50", "whiteAlpha.100")} rounded="lg" p={{ base: "4", md: "6", lg: "8" }} minH="128px">
     <Stack spacing="4">
       <HStack spacing="4" flex="1" align="flex-start">
         <Image src={job?.companyLogo} alt={`logo ${job?.companyName}`} boxSize="12" rounded="md" />
@@ -32,5 +31,5 @@ export const JobCard = ({ job }: { job: JobTypes }) => (
         From {formatDate(job?.startDate)} to {job?.endDate ? formatDate(job?.endDate) : "Today"}
       </Text>
     </Stack>
-  </EmptyCard>
+  </Flex>
 );

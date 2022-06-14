@@ -1,14 +1,14 @@
 import React from "react";
-import { Box, Heading, List, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, List, SimpleGrid, Skeleton, Stack, Text } from "@chakra-ui/react";
 import { Section } from "src/components/Section";
 import { JobList } from "./JobList";
+import { EmptyJobCard } from "./EmptyJobCard";
 
 import { useAirtable } from "src/hooks/useAirtable";
 import { JobTypes } from "utils/types";
-import { EmptyCard } from "./EmptyCard";
 
 export const JobHistory = () => {
-  const employmentHistory = useAirtable<Array<{ id: string; fields: JobTypes }>>("getEmploymentHistory");
+  const { data, isLoading } = useAirtable<Array<{ id: string; fields: JobTypes }>>("getEmploymentHistory");
 
   return (
     <Section>
@@ -23,10 +23,10 @@ export const JobHistory = () => {
 
         <Box>
           <List spacing="8">
-            {employmentHistory.data === undefined ? (
-              [...Array(3).keys()].map((_, i) => <EmptyCard key={i} />)
+            {isLoading || data === undefined ? (
+              [...Array(3).keys()].map((_, i) => <Skeleton key={i} height="128px" rounded="lg" />)
             ) : (
-              <JobList list={employmentHistory.data} />
+              <JobList list={data} />
             )}
           </List>
         </Box>

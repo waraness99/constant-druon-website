@@ -10,9 +10,17 @@ export type JobTypes = {
   endDate: string;
 };
 
-export type FunFactProps = {
+export type FunFactTypes = {
   id: string;
   title: string;
   description: string;
   icon: IconType;
+};
+
+export type ProjectPreviewTypes = {
+  name: string;
+  date: string;
+  shortDescription: string;
+  primaryImage: string;
+  technicalStack: string[];
 };

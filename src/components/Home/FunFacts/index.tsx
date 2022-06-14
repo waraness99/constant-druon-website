@@ -1,13 +1,13 @@
 import React from "react";
-import { Heading, Text, Stack, SimpleGrid, useColorModeValue as mode } from "@chakra-ui/react";
+import { Heading, Stack, SimpleGrid, useColorModeValue as mode } from "@chakra-ui/react";
 import { IoPlayOutline, IoBookOutline, IoLockClosedOutline, IoBicycle } from "react-icons/io5";
 
 import { Section } from "src/components/Section";
 import { FunFactCard } from "./FunFactCard";
 
-import { FunFactProps } from "utils/types";
+import { FunFactTypes } from "utils/types";
 
-const funFacts: FunFactProps[] = [
+const funFacts: FunFactTypes[] = [
   {
     id: "lock-picking",
     title: "I can pick a lock",

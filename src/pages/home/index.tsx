@@ -10,7 +10,7 @@ import { FunFacts } from "src/components/Home/FunFacts";
 const Home: NextPage = () => (
   <>
     <Head>
-      <title>Constant Druon - Software Engineer Student</title>
+      <title>Constant Druon - Software Engineer</title>
     </Head>
 
     <Hero />

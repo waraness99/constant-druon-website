@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Heading, List, SimpleGrid, Skeleton, Stack, Text } from "@chakra-ui/react";
 import { Section } from "src/components/Section";
 import { JobList } from "./JobList";
-import { EmptyJobCard } from "./EmptyJobCard";
 
 import { useAirtable } from "src/hooks/useAirtable";
 import { JobTypes } from "utils/types";

@@ -9,10 +9,12 @@ import { GetResumeButton } from "src/components/Button/GetResumeButton";
 import { MobileNav } from "./components/MobileNav";
 import { NavLink } from "./components/NavLink";
 
-import { navbar } from "utils/links";
+import { navbar, RouteProps } from "utils/links";
 
 export const Header = () => {
   const { pathname } = useRouter();
+  const isActiveLink = (route: RouteProps) =>
+    route.path === "/" ? pathname === route.path : pathname.startsWith(route.path);
 
   return (
     <Box
@@ -34,9 +36,9 @@ export const Header = () => {
             </NextLink>
 
             <HStack display={{ base: "none", lg: "flex" }} spacing="8">
-              {navbar.map((page) => (
-                <NavLink.Desktop key={page.id} active={pathname === page.path} href={page.path}>
-                  {page.id}
+              {navbar.map((route) => (
+                <NavLink.Desktop key={route.id} active={isActiveLink(route)} href={route.path}>
+                  {route.id}
                 </NavLink.Desktop>
               ))}
             </HStack>

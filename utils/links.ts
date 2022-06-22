@@ -1,4 +1,9 @@
-export const navbar = [
+export interface RouteProps {
+  id: string;
+  path: string;
+}
+
+export const navbar: RouteProps[] = [
   {
     id: "home",
     path: "/",

@@ -23,7 +23,7 @@ export default async function handler(req: any, res: any) {
     const records = await table
       .select({
         view: "published",
-        fields: ["name", "shortDescription", "date", "primaryImage", "technicalStack"],
+        fields: ["name", "shortDescription", "primaryImage", "technicalStack", "rating"],
       })
       .firstPage();
     const minifiedRecords = minifyRecords(records);

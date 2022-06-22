@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next/link";
-import { Stack, Text, useColorModeValue as mode, Box, Tag, WrapItem, Wrap, Icon } from "@chakra-ui/react";
+import NextLink from "next/link";
+import { Stack, Link, Text, Box, Tag, WrapItem, Wrap, Icon, useColorModeValue as mode } from "@chakra-ui/react";
 import { ProjectPreviewTypes } from "utils/types";
 import { IoArrowForward } from "react-icons/io5";
 
@@ -8,8 +8,8 @@ export const ProjectCard = ({ id, projectInfo }: { id: string; projectInfo: Proj
   const { name, primaryImage, shortDescription, technicalStack } = projectInfo;
 
   return (
-    <Link key={id} href="/projects/[id]" as={`/projects/${id}`} passHref>
-      <Box className="group">
+    <NextLink key={id} href="/projects/[id]" as={`/projects/${id}`} passHref>
+      <Link className="group">
         <Box position="relative">
           <Box
             h="64"
@@ -63,7 +63,7 @@ export const ProjectCard = ({ id, projectInfo }: { id: string; projectInfo: Proj
               ))}
           </Wrap>
         </Stack>
-      </Box>
-    </Link>
+      </Link>
+    </NextLink>
   );
 };

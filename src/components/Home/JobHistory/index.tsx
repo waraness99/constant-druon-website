@@ -22,7 +22,7 @@ export const JobHistory = () => {
 
         <Box>
           <List spacing="8">
-            {isLoading || data === undefined ? (
+            {isLoading || data === undefined || data.length === 0 ? (
               [...Array(3).keys()].map((_, i) => <Skeleton key={i} height="128px" rounded="lg" />)
             ) : (
               <JobList list={data} />

@@ -19,8 +19,24 @@ export type FunFactTypes = {
 
 export type ProjectPreviewTypes = {
   name: string;
-  date: string;
   shortDescription: string;
   primaryImage: string;
   technicalStack: string[];
+  rating: number;
 };
+
+export type ProjectIMediaTypes = {
+  name: string;
+  url: string;
+};
+
+export type ProjectDetailTypes = {
+  longDescription: string;
+  images: Array<ProjectIMediaTypes>;
+  websiteUrl: string;
+  repositoryUrl: string;
+  projectType: string;
+  date: string;
+};
+
+export type ProjectTypes = ProjectPreviewTypes & ProjectDetailTypes;

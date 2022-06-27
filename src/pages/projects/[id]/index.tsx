@@ -13,17 +13,16 @@ import { ProjectMetadata } from "src/components/Projects/ProjectDetails/ProjectM
 import { useAirtable } from "src/hooks/useAirtable";
 import { ProjectTypes } from "utils/types";
 
-const Project: NextPage = () => {
-  const router = useRouter();
-  const { id } = router?.query;
+const Loading = () => (<p>Loading...</p>)
 
+const ProjectContainer = ({ id }: { id: string | string[] | undefined }) => {
   const { isLoading, data } = useAirtable<{ fields: ProjectTypes }>(`getProjects/${id}`);
   const projectInfo = data?.fields;
 
   return (
     <>
       {isLoading || projectInfo === undefined ? (
-        <p>Loading...</p>
+        <Loading />
       ) : (
         <Section>
           <Box>
@@ -49,6 +48,22 @@ const Project: NextPage = () => {
             <MarkdownRenderer content={projectInfo?.longDescription} />
           </Box>
         </Section>
+      )}
+    </>
+  )
+}
+
+
+const Project: NextPage = () => {
+  const router = useRouter();
+  const { id } = router?.query;
+
+  return (
+    <>
+      {id === undefined ? (
+        <Loading />
+      ) : (
+        <ProjectContainer id={id} />
       )}
     </>
   );
